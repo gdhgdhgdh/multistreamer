@@ -1,5 +1,5 @@
-local Account = require'multistreamer.models.account'
-local StreamAccount = require'multistreamer.models.stream_account'
+-- local Account = require'multistreamer.models.account'
+-- local StreamAccount = require'multistreamer.models.stream_account'
 
 local config = require'multistreamer.config'.get()
 local resty_sha1 = require'resty.sha1'
@@ -9,7 +9,7 @@ local slugify = require('lapis.util').slugify
 local M = {}
 
 M.name = 'rtmp'
-M.displayname = 'Custom RTMP'
+M.displayname = 'External RTMP'
 M.allow_sharing = true
 M.read_comments = false
 M.write_comments = false
@@ -102,7 +102,7 @@ function M.publish_start(account, stream)
 end
 
 function M.publish_stop(account, stream)
-  stream:unsert('http_url')
+  stream:unset('http_url')
   return true, nil
 end
 

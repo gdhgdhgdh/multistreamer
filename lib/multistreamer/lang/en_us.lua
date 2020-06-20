@@ -154,6 +154,13 @@ return {
     },
   },
 
+  mixcloud = {
+    create_forms = {
+      username = 'Username',
+      password = 'Password',
+    },
+  },
+
   mixer = {
     metadata_form = {
       title = 'Stream Title',

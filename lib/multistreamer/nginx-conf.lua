@@ -139,8 +139,8 @@ rtmp {
       hls_nested on;
       hls_cleanup on;
       hls_continuous off;
-      hls_fragment 10s;
-      hls_playlist_length 60s;
+      hls_fragment 2s;
+      hls_playlist_length 10s;
 
     }
   }
